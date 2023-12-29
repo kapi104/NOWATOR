@@ -1,29 +1,75 @@
 import logo from '../../img/logo.svg';
 import styles from './Header.module.scss';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header id={styles.banner}>
-      <Link to="/">
+      <NavLink to="/">
         <img src={logo} alt="" />
-      </Link>
+      </NavLink>
 
-      <ul>
-        <li>
-          <Link to="/Oferta">Oferta</Link>
-        </li>
-        <li>
-          <Link to="/Galeria">Galeria</Link>
-        </li>
-        <li>
-          <Link to="/Sklep">Sklep</Link>
-        </li>
-        <li>
-          <Link to="/Kontakt">Kontakt</Link>
-        </li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <NavLink
+              to="/oferta"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? styles.active
+                  : isPending
+                    ? styles.active
+                    : styles.inactive
+              }
+            >
+              Oferta
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/galeria"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? styles.active
+                  : isPending
+                    ? styles.active
+                    : styles.inactive
+              }
+            >
+              Galeria
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/sklep"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? styles.active
+                  : isPending
+                    ? styles.active
+                    : styles.inactive
+              }
+            >
+              Sklep
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/kontakt"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? styles.active
+                  : isPending
+                    ? styles.active
+                    : styles.inactive
+              }
+            >
+              Kontakt
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
