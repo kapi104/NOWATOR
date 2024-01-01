@@ -8,3 +8,7 @@ body {
   background-color: whitesmoke;
   margin: 0;
 }
+
+*:focus-visible {
+  border: 2px dotted black;
+}
