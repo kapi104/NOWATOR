@@ -9,6 +9,20 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  overflow: hidden;
+  z-index: 2;
+
+  .gradientCover {
+    position: absolute;
+    height: calc(100vh - 6rem);
+    width: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(245, 245, 245, 1) 0%,
+      rgba(253, 0, 0, 0) 15%
+    );
+    z-index: 1;
+  }
 
   span {
     color: $secondaryText;
@@ -16,5 +30,49 @@
     font-weight: 600;
     text-shadow: 0 0 3px black;
     text-align: center;
+  }
+
+  .downArrows {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 1rem;
+    transition: opacity 0.5s;
+    z-index: 2;
+
+    .ar1 {
+      animation: blink 2s linear infinite;
+    }
+
+    .ar2 {
+      animation: blink 2s linear infinite;
+      animation-delay: 0.3s;
+    }
+
+    img {
+      height: 1rem;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.5;
   }
 }

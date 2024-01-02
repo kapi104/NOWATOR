@@ -1,0 +1,16 @@
+.panel {
+  position: relative;
+  max-width: 90%;
+  min-height: 50vh;
+
+  .content {
+    padding-right: 50%;
+  }
+
+  img {
+    max-width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
