@@ -21,4 +21,10 @@ describe('MainPage', () => {
       expect(screen.getAllByRole('link')[0]).toBeInTheDocument();
     });
   });
+
+  describe('Link panels', () => {
+    it('should display 4 panels with links', () => {
+      expect(screen.getAllByTestId('panel')).toHaveLength(4);
+    });
+  });
 });
