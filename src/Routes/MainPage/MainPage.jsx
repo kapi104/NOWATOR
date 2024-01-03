@@ -1,5 +1,5 @@
 import styles from './MainPage.module.scss';
-import LandingButton from '../../components/LandingButton/LandingButton';
+import LinkButton from '../../components/LinkButton/LinkButton';
 import Panel from '../../components/Panel/Panel';
 import img1 from '../../img/panelPhotos/1.jpg';
 import img2 from '../../img/panelPhotos/2.jpg';
@@ -17,7 +17,7 @@ const MainPage = () => {
           <br />
           Wysoka klasa materiałów
         </span>
-        <LandingButton></LandingButton>
+        <LinkButton content="Nasza Oferta" />
         <div className={styles.downArrows}>
           <img src={downArrow} className={styles.ar1} />
           <img src={downArrow} className={styles.ar2} />
@@ -39,6 +39,7 @@ const MainPage = () => {
               similique modi ex debitis eveniet enim totam ipsum quas aliquid
               itaque libero architecto!"
           img={img2}
+          reverse={true}
         />
         <Panel
           title="Sklep"
@@ -55,6 +56,7 @@ const MainPage = () => {
               similique modi ex debitis eveniet enim totam ipsum quas aliquid
               itaque libero architecto!"
           img={img4}
+          reverse={true}
         />
       </div>
     </div>

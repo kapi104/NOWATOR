@@ -1,24 +1,40 @@
 import styles from './Panel.module.scss';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import LinkButton from '../LinkButton/LinkButton';
 
-const Panel = ({ title, text, img }) => {
-  return (
-    <div className={styles.panel} data-testid="panel">
-      <div className={styles.content}>
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <Link to={`/${title.toLowerCase()}`}>{title}</Link>
+const Panel = ({ title, text, img, reverse = false }) => {
+  if (!reverse) {
+    return (
+      <div className={styles.panel} data-testid="panel">
+        <div className={styles.content}>
+          <LinkButton content={title} />
+          <p>{text}</p>
+        </div>
+        <div className={styles.imgWrapper}>
+          <img src={img} />
+        </div>
       </div>
-      <img src={img} />
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className={`${styles.panel} ${styles.reverse}`} data-testid="panel">
+        <div className={styles.imgWrapper}>
+          <img src={img} />
+        </div>
+        <div className={styles.content}>
+          <LinkButton content={title} reverse={true} />
+          <p>{text}</p>
+        </div>
+      </div>
+    );
+  }
 };
 
 Panel.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
   img: PropTypes.node,
+  reverse: PropTypes.bool,
 };
 
 export default Panel;

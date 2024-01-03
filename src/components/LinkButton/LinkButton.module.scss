@@ -1,6 +1,6 @@
 @import '../../colors.scss';
 
-.LandingButton {
+.LinkButton {
   display: block;
   background-color: $primaryBg;
   text-decoration: none;
@@ -29,5 +29,18 @@
 
   &:hover::before {
     transform: translateX(0);
+  }
+
+  &.reverse {
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);
+
+    &::before {
+      clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);
+      transform: translateX(100%);
+    }
+
+    &:hover::before {
+      transform: translateX(0);
+    }
   }
 }
