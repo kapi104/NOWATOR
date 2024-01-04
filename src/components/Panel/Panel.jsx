@@ -1,5 +1,6 @@
 import styles from './Panel.module.scss';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import LinkButton from '../LinkButton/LinkButton';
 
 const Panel = ({ title, text, img, reverse = false }) => {
@@ -11,7 +12,9 @@ const Panel = ({ title, text, img, reverse = false }) => {
           <p>{text}</p>
         </div>
         <div className={styles.imgWrapper}>
-          <img src={img} />
+          <Link to={`/${title.toLowerCase()}`}>
+            <img src={img} />
+          </Link>
         </div>
       </div>
     );
@@ -19,7 +22,9 @@ const Panel = ({ title, text, img, reverse = false }) => {
     return (
       <div className={`${styles.panel} ${styles.reverse}`} data-testid="panel">
         <div className={styles.imgWrapper}>
-          <img src={img} />
+          <Link to={`/${title.toLowerCase()}`}>
+            <img src={img} />
+          </Link>
         </div>
         <div className={styles.content}>
           <LinkButton content={title} reverse={true} />

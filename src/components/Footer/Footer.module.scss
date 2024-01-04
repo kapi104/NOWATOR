@@ -1,0 +1,31 @@
+@import '../../colors.scss';
+
+.footer {
+  background-color: $primaryBg;
+  box-shadow: 0 0 5px grey;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1920px;
+
+    img {
+      height: 4rem;
+    }
+
+    ul {
+      font-size: 0.7rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $primaryText;
+    }
+
+    .adres {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
