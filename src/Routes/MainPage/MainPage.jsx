@@ -1,5 +1,5 @@
 import styles from './MainPage.module.scss';
-import LinkButton from '../../components/LinkButton/LinkButton';
+import LandingPageButton from '../../components/LandingPageButton/LandingPageButton';
 import Panel from '../../components/Panel/Panel';
 import img1 from '../../img/panelPhotos/1.jpg';
 import img2 from '../../img/panelPhotos/2.jpg';
@@ -17,13 +17,13 @@ const MainPage = () => {
           <br />
           Wysoka klasa materiałów
         </span>
-        <LinkButton content="Nasza Oferta" />
+        <LandingPageButton content="Nasza Oferta" />
         <div className={styles.downArrows}>
           <img src={downArrow} className={styles.ar1} />
           <img src={downArrow} className={styles.ar2} />
         </div>
       </div>
-      <div className={styles.panels}>
+      <main className={styles.panels}>
         <Panel
           title="Oferta"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
@@ -58,7 +58,7 @@ const MainPage = () => {
           img={img4}
           reverse={true}
         />
-      </div>
+      </main>
     </div>
   );
 };

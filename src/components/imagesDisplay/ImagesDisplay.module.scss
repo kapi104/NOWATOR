@@ -1,0 +1,43 @@
+@import '../../colors.scss';
+
+.ImagesDisplay {
+  width: 100%;
+
+  .wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+    height: 40%;
+  }
+
+  //ZMNIEJSZYĆ WYSOKOŚĆ ZDJĘĆ!!!
+
+  img {
+    width: 100%;
+  }
+
+  .w1 {
+    left: -13%;
+    width: 50%;
+  }
+
+  .w2 {
+    left: calc(22%);
+    width: 50%;
+    z-index: 1;
+  }
+
+  .w3 {
+    right: -13%;
+    width: 50%;
+  }
+
+  .img1 {
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  .img3 {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}

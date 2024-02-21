@@ -4,7 +4,7 @@
   display: block;
   background-color: $primaryBg;
   text-decoration: none;
-  color: $secondaryText;
+  color: $primaryText;
   font-size: 2rem;
   min-width: 300px;
   padding: 0.5rem;
@@ -12,7 +12,6 @@
   clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
   z-index: 5;
   position: relative;
-  background: $secondaryGradient;
 
   &::before {
     clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);

@@ -3,6 +3,8 @@
 .footer {
   background-color: $primaryBg;
   box-shadow: 0 0 5px grey;
+  padding: 2rem;
+  font-size: 0.9rem;
 
   .wrapper {
     display: flex;
@@ -12,10 +14,6 @@
 
     img {
       height: 4rem;
-    }
-
-    ul {
-      font-size: 0.7rem;
     }
 
     a {

@@ -1,5 +1,11 @@
+import ImagesDisplay from '../../components/imagesDisplay/ImagesDisplay';
+
 const Offer = () => {
-  return <div>Offer</div>;
+  return (
+    <main>
+      <ImagesDisplay />
+    </main>
+  );
 };
 
 export default Offer;

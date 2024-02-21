@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import styles from './LinkButton.module.scss';
+import styles from './LandingPageButton.module.scss';
 
 const LinkButton = ({ content, reverse = false }) => {
   return (
     <Link
-      to={`/${content}`}
+      to="/oferta"
       className={`${styles.LinkButton} ${reverse ? styles.reverse : ''}`}
     >
       {content}
