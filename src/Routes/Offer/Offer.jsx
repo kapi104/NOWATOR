@@ -1,4 +1,4 @@
-import ImagesDisplay from '../../components/imagesDisplay/ImagesDisplay';
+import ImagesDisplay from '../../components/Carousel/Carousel';
 
 const Offer = () => {
   return (
