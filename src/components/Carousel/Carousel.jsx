@@ -7,7 +7,7 @@ import styles from './Carousel.module.scss';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const ImagesDisplay = () => {
+const Carousel = () => {
   const img = useRef();
   const nextImg = useRef();
   const [currentPhoto, setCurrentPhoto] = useState(1);
@@ -48,4 +48,4 @@ const ImagesDisplay = () => {
   );
 };
 
-export default ImagesDisplay;
+export default Carousel;

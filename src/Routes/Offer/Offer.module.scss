@@ -1,0 +1,36 @@
+@import '../../colors.scss';
+
+.offer {
+  .offerPanel {
+    box-shadow: 0px 3px 10px grey;
+    position: relative;
+    background-color: $primaryBg;
+    margin-top: 7rem;
+    width: 90%;
+    padding: 2rem;
+    .carouselContainer {
+      position: absolute;
+      top: -5rem;
+      right: -5rem;
+      width: 40%;
+    }
+    h1 {
+      width: calc(60% + 3rem);
+      text-align: center;
+    }
+    p {
+      width: calc(60% + 3rem);
+      text-align: center;
+      font-size: 1.4rem;
+      padding: 3rem 0;
+    }
+    h2 {
+      // background: $secondaryGradient;
+      width: calc(100% + 4rem);
+      margin-left: -2rem;
+      // box-shadow: 0px 3px 10px grey;
+      text-align: center;
+      // color: $secondaryText;
+    }
+  }
+}
